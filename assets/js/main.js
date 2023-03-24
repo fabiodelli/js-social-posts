@@ -87,12 +87,12 @@ const posts = [
 
 posts.forEach(post => {
     const containerEl=document.getElementById("container")
-    const nullImg = post.media === null ? "https://unsplash.it/300/300?" : post.media;
+    const nullImg = post.author.image === null ? "https://unsplash.it/300/300?" : post.author.image;
     const postData = `<div class="post">
                         <div class="post__header">
                             <div class="post-meta">                    
                                 <div class="post-meta__icon">
-                                    <img class="profile-pic" src="${post.author.image}" alt="Phil Mangione">                    
+                                    <img class="profile-pic" src="${nullImg}" alt="Phil Mangione">                    
                                 </div>
                                 <div class="post-meta__data">
                                     <div class="post-meta__author">${post.author.name}</div>
@@ -102,7 +102,7 @@ posts.forEach(post => {
                         </div>
                         <div class="post__text">${post.content}</div>
                         <div class="post__image">
-                            <img src="${nullImg}" alt="">
+                            <img src="${post.media}" alt="">
                         </div>
                         <div class="post__footer">
                             <div class="likes js-likes">
@@ -126,3 +126,8 @@ posts.forEach(post => {
 });
 
 
+/* const likes = document.querySelectorAll(".likes")
+likes.addEventListener(onclick, blue());
+function blue () {
+    likes.classList.add(".text_blue")
+} */
