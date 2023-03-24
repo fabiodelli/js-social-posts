@@ -87,6 +87,7 @@ const posts = [
 
 posts.forEach(post => {
     const containerEl=document.getElementById("container")
+    const nullImg = post.author.image === null ? "https://unsplash.it/300/300?image=29" : post.author.image;
     const postData = `<div class="post">
                         <div class="post__header">
                             <div class="post-meta">                    
@@ -101,7 +102,7 @@ posts.forEach(post => {
                         </div>
                         <div class="post__text">${post.content}</div>
                         <div class="post__image">
-                            <img src="${post.author.image}" alt="">
+                            <img src="${nullImg}" alt="">
                         </div>
                         <div class="post__footer">
                             <div class="likes js-likes">
@@ -119,4 +120,9 @@ posts.forEach(post => {
                     </div>`
 
     containerEl.insertAdjacentHTML('beforeend', postData)                 
+
+
+    
 });
+
+
