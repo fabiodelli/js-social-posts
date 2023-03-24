@@ -131,3 +131,11 @@ likes.addEventListener(onclick, blue());
 function blue () {
     likes.classList.add(".text_blue")
 } */
+
+const selectObj = posts[3]
+console.log(selectObj);
+const takeName = selectObj.author.name
+console.log(takeName);
+const takeCharN = takeName.charAt(0)
+const takeCharS = takeName.charAt(5)
+const Initials =takeCharN+takeCharS
