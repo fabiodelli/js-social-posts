@@ -125,5 +125,5 @@ h1 {
     cursor: default;
 }
 .text_blue{
-    color: blue;
+    color: blue!important;
 }

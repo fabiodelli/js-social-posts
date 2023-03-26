@@ -106,7 +106,7 @@ posts.forEach(post => {
                         </div>
                         <div class="post__footer">
                             <div class="likes js-likes">
-                                <div class="likes__cta">
+                                <div  class="likes__cta">
                                     <a class="like-button  js-like-button" href="#" data-postid="1">
                                         <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
                                         <span class="like-button__label">Mi Piace</span>
@@ -120,22 +120,24 @@ posts.forEach(post => {
                     </div>`
 
     containerEl.insertAdjacentHTML('beforeend', postData)                 
-
-
+    /* const likes = document.querySelector(".like-button")
+    likes.addEventListener("onclick", blue());
+ */
+    /* console.log(containerEl.length); */
     
 });
 
+/* array.forEach(element => {
+    
+}); */
 
-/* const likes = document.querySelectorAll(".likes")
-likes.addEventListener(onclick, blue());
-function blue () {
-    likes.classList.add(".text_blue")
+/* function blue () {
+    const likes = document.querySelector(".like-button")
+    likes.classList.add("text_blue")
 } */
 
-const selectObj = posts[3]
-console.log(selectObj);
+/* const selectObj = posts[3]
 const takeName = selectObj.author.name
-console.log(takeName);
 const takeCharN = takeName.charAt(0)
 const takeCharS = takeName.charAt(5)
-const Initials =takeCharN+takeCharS
+const Initials =takeCharN+takeCharS */
